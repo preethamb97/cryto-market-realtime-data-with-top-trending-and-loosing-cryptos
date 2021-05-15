@@ -19,7 +19,7 @@ module.exports.ROUTES = {
 };
 
 module.exports.RATE_LIMITER = {
-  MAX_REQUEST: 30000,
+  MAX_REQUEST: 2,
   LIMIT_EXPIRY_TIME: 1000 * 60
 }
 
