@@ -18,4 +18,8 @@ module.exports.ROUTES = {
   API: 'api'
 };
 
+module.exports.RATE_LIMITER = {
+  MAX_REQUEST: 30000,
+  LIMIT_EXPIRY_TIME: 1000 * 60
+}
 

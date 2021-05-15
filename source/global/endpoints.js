@@ -12,6 +12,6 @@ module.exports.API_ENDPOINTS = {
 } 
 
 module.exports.APP_ENDPOINTS = {
-  LEADERBOARD: 'leaderboard',
-  HOME: 'home'
+  LEADERBOARD: '/leaderboard',
+  HOME: '/home'
 }

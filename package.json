@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +13,11 @@
   "dependencies": {
     "axios": "0.21.1",
     "express": "4.17.1",
+    "express-limiter": "1.6.1",
     "helmet": "4.6.0",
     "lodash": "4.17.21",
     "morgan": "1.10.0",
+    "redis": "3.1.2",
     "winston": "3.3.3"
   }
 }
