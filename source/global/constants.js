@@ -1,6 +1,6 @@
 module.exports.API_CONFIGURATION_TYPES = {
-  COIN_MARKET_CAP : 1,
-  COIN_DCX : 2
+  COIN_MARKET_CAP: 1,
+  COIN_DCX: 2
 };
 
 module.exports.API_REQUEST_METHOD = {
@@ -19,7 +19,12 @@ module.exports.ROUTES = {
 };
 
 module.exports.RATE_LIMITER = {
-  MAX_REQUEST: 2,
+  MAX_REQUEST: 200,
   LIMIT_EXPIRY_TIME: 1000 * 60
-}
+};
 
+module.exports.EXECUTION_SERVER_TYPE = {
+  POSTMAN: 1,
+  LOCALHOST: 2,
+  SERVER: 3
+};

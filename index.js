@@ -9,6 +9,7 @@ const helmet = require('helmet');
 const redisClient = require('redis').createClient()
 const { SERVER_PORT } = require('./source/config/config');
 const global = require('./source/global');
+const { SERVER_TYPE, SERVER_URLS } = require('./source/config/config')
 app.use(helmet());
 app.use(morgan('dev'));
 
@@ -28,8 +29,11 @@ limiter({
 // const server = https.createServer({key: privateKey, cert: certificate},app);
 app.use(routes);
 const server = http.createServer(app);
-// console.log(routes.stack.map(routesData => routesData.route.path))
 server.listen(SERVER_PORT, () => {
-  console.log(`Server started at port : ${SERVER_PORT}`);
+  console.log(`Server started at port : ${SERVER_PORT} \n\nENDPOINTS: \n`);
+  routes.stack.map(routesData => {
+    if (routesData.route.path == '*') return;
+    console.log(`${SERVER_URLS[SERVER_TYPE]}${routesData.route.path}`);
+  })
 });
 
