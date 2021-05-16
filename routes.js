@@ -16,7 +16,7 @@ const routes = [{
   type: global.ROUTE_TYPE.HTML,
   path: `${__dirname}` + '/source/renderer/pages/leaderboard.html',
   method: global.API_REQUEST_METHOD.GET,
-  function_name: rendererLeaderboardFunctions.leaderBoardRenderer
+  function_name: rendererLeaderboardFunctions.leaderBoardTopGainerRenderer
 }];
 
 routes.map(async route => {
@@ -30,7 +30,7 @@ routes.map(async route => {
       break;
     case global.ROUTE_TYPE.HTML:
       router.get(route.endpoint, async (req, res) => {
-        let leaderboardRendererData = await route.function_name();
+        let leaderboardRendererData = await route.function_name(['top_gainers', 'top_losers', 'top_volume']);
         fs.readFile(route.path, null, (error, data) => {
           if (error) {
             res.sendFile(`${__dirname}` + '/source/renderer/pages/pageNotFound.html');
