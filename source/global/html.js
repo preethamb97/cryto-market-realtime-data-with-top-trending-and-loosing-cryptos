@@ -12,6 +12,7 @@ module.exports.BOOSTRAP = {
     TABLE_HEADER_CELL_END: `</th>`,
     TABLE_DATA_CELL_START: `<td>`,
     TABLE_DATA_CELL_END: `<td>`,
+    TABLE_CAPTION: `<caption>{{$Data$}}</caption>`
   }
 };
 

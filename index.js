@@ -1,7 +1,6 @@
 const express = require('express');
 const http = require('http');
 const https = require('https');
-const fs = require('fs');
 const app = express();
 const routes = require('./routes');
 const morgan = require('morgan');

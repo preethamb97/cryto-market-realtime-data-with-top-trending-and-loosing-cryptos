@@ -2,9 +2,9 @@ const api = require('../../library/query/api');
 const global = require('../../global/html');
 module.exports.leaderBoardRenderer = async () => {
   let leaderBoardData = await api.leaderboard();
-  console.log(leaderBoardData)
   let html = '';
   html += global.BOOSTRAP.TABLE.TABLE_START;
+  html += global.BOOSTRAP.TABLE.TABLE_CAPTION.replace(global.SEARCH_REGEX, 'Top Gainers');
   html += global.BOOSTRAP.TABLE.TABLE_HEADER_START;
   html += global.BOOSTRAP.TABLE.TABLE_ROW_START;
 
